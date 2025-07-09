@@ -6,8 +6,7 @@ y = torch.tensor([2.0, 4.0, 6.0]) # y =  2x
 w = torch.tensor(0.0, requires_grad=True)
 b = torch.tensor(0.0, requires_grad=True)
 
-optimizer = torch.optim.SGD([w, b], lr=0.01)
-
+optimizer = torch.optim.Adam([w, b], lr=0.1)
 for epoch in range(100):
     y_pred = w * x + b
 
